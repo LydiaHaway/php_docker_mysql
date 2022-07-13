@@ -6,7 +6,7 @@ $familyMember = [
 
 $ramen = ["Ramen Noodles", "Dashi Stock", "Miso Paste", "Mirin", "Shoyu", "Nori"]; 
 $areYouHungry = false; 
-$faveMovies = ["Belfast", "Dunkirk", "Big Fish", "Trainspotting" ,"1917", "Genius"];
+$faveMovies = ["Belfast", "Dunkirk", "King's speech", "Big Fish", "Trainspotting" ,"1917"];
 
 $me = [ "firstname" => "Lydia",
 "lastname" => "Haway", 
