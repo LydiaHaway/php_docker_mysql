@@ -20,7 +20,7 @@
 	if (isset($_POST['name'], $_POST['lastname'])) {
 		$name = $_POST['name'];
 		$lastname = $_POST['lastname'];
-		echo htmlspecialchars($name) . " " . htmlspecialchars($lastname);
+		echo strip_tags($name) . " " . strip_tags($lastname);
 	}
 	?>
 

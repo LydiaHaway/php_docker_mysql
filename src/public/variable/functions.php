@@ -48,14 +48,11 @@ function unreplace($word)
 };
 
 
-function feedback($message, $class)
+function feedback($message = "Incorrect email adress", $class = "info")
 {
     $newClass = mb_ucfirst($class);
-    if ($class === "") {
-        echo "<div class = 'info' > Info:  $message </div> ";
-    } else {
-        echo "<div class = '$class' > $newClass :  $message </div> ";
-    }
+
+    echo "<div class = '$class' > $newClass :  $message </div> ";
 };
 
 function generatorWords()
