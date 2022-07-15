@@ -48,7 +48,7 @@ function unreplace($word)
 };
 
 
-function feedback($message = "Incorrect email adress", $class = "info")
+function feedback($message, $class = "info")
 {
     $newClass = mb_ucfirst($class);
 
@@ -142,7 +142,7 @@ $h = 2;
     </p>
 
     <?php
-    feedback("Incorrect email adress", "error")
+    feedback("Incorrect email adress")
     ?>
 
 
