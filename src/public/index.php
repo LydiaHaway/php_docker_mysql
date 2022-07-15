@@ -20,8 +20,8 @@
 	if (isset($_POST['name'], $_POST['lang'])) {
 		$name = $_POST['name'];
 		$lang = $_POST['lang'];
-		echo $name . '<br>';
-		echo $lang;
+		echo htmlspecialchars($name);
+		echo htmlspecialchars($lang);
 	}
 	?>
 

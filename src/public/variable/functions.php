@@ -45,8 +45,52 @@ function replace($word)
 function unreplace($word)
 {
     return strtr($word, ["æ" => "ae"]);
-}
+};
 
+
+function feedback($message, $class)
+{
+    $newClass = mb_ucfirst($class);
+    if ($class === "") {
+        echo "<div class = 'info' > Info:  $message </div> ";
+    } else {
+        echo "<div class = '$class' > $newClass :  $message </div> ";
+    }
+};
+
+function generatorWords()
+{
+    $string = '';
+    $string2 = "";
+    $letters = array(
+        "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
+        "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"
+    );
+
+    for ($i = 1; $i <= rand(1, 5); $i++) {
+        $string .= $letters[rand(0, 24)];
+    }
+
+    for ($i = 1; $i <= rand(7, 15); $i++) {
+        $string2 .= $letters[rand(0, 24)];
+    }
+
+    echo   "<p> $string  $string2 </p>";
+};
+
+if (isset($_GET['words'])) {
+    generatorWords();
+};
+
+$yelling = "STOP YELLING I CAN'T HEAR MYSELF THINKING!!";
+
+function calculate_cone_volume($r, $h)
+{
+    return round($r * $r * 3.14 * $h * (1 / 3));
+};
+
+$r = 5;
+$h = 2;
 
 ?>
 
@@ -99,6 +143,34 @@ function unreplace($word)
         echo unreplace("microsphæra")
         ?>
     </p>
+
+    <?php
+    feedback("Incorrect email adress", "error")
+    ?>
+
+
+    <p>
+    <h3>Generate a new word</h3>
+
+    <a href='functions.php?words=true'>
+        <button>Generate words</button>
+    </a>
+
+
+</html>
+
+</p>
+
+<p>
+    <?php
+    echo mb_strtolower($yelling)
+    ?>
+</p>
+
+<p>
+    The volume of a cone which ray is <?php echo $r ?> and height is <?php echo $h ?> is :
+    <?php echo calculate_cone_volume($r, $h) ?>
+</p>
 
 
 </body>
