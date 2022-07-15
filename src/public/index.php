@@ -12,16 +12,15 @@
 
 	<form method="post" action="index.php">
 		<input type="text" name="name">
-		<input type="text" name="lang">
+		<input type="text" name="lastname">
 		<input type="submit" value="submit">
 	</form>
 
 	<?php
-	if (isset($_POST['name'], $_POST['lang'])) {
+	if (isset($_POST['name'], $_POST['lastname'])) {
 		$name = $_POST['name'];
-		$lang = $_POST['lang'];
-		echo htmlspecialchars($name);
-		echo htmlspecialchars($lang);
+		$lastname = $_POST['lastname'];
+		echo htmlspecialchars($name) . " " . htmlspecialchars($lastname);
 	}
 	?>
 
