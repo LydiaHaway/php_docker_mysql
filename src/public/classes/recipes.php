@@ -127,3 +127,26 @@ class Recipe
 //echo $recipe1->title;
 
 //echo $recipe1->getTitle();
+
+class Cocktail extends Recipe
+{
+    private $alcoholpercentage;
+
+    public function setAlcoholPercentage($alcoholpercentage)
+    {
+        return $this->$alcoholpercentage = $alcoholpercentage;
+    }
+
+    public function getAlcoholPercentage()
+    {
+        return $this->alcoholpercentage;
+    }
+}
+
+$piscosour = new Cocktail("Pisco Sour");
+$piscosour->addIngredient("Pisco", 2, "ounce");
+$piscosour->addIngredient("Lime juice", 1, "ounce");
+$piscosour->addIngredient("Egg white", 1);
+$piscosour->setAlcoholPercentage(25);
+$piscosour->getIngredients();
+$piscosour->getAlcoholPercentage();

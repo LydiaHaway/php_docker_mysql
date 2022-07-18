@@ -6,7 +6,7 @@ include "classes/recipecollection.php";
 include "inc/cookbook.php";
 
 
-//echo Render::displayRecipe($belgian_waffles);
+echo Render::displayRecipe($belgian_waffles) . "<br/>" . "<br/>";
 
 $cookbook = new RecipeCollection("Becode recipe");
 $cookbook->addRecipe($lemon_chicken);
@@ -20,4 +20,6 @@ $cookbook->addRecipe($dried_mushroom_ragout);
 
 echo Render::listRecipes($cookbook->getRecipeTitles()) . "<br/>" . "<br/>";
 
-echo Render::listRecipes($cookbook->filterByTag("dinner"));
+echo Render::listRecipes($cookbook->filterByTag("dinner")) . "<br/>" . "<br/>";
+
+echo Render::displayRecipe($piscosour) . "<br/>" . "<br/>";
