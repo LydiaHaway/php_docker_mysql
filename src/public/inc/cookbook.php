@@ -25,7 +25,7 @@ declare(strict_types=1);
  * $spicy_omelette
  * $scones
  *
-*/
+ */
 
 $lemon_chicken = new Recipe("Italian Lemon Chicken");
 
@@ -259,9 +259,9 @@ $pistachio_duck = new Recipe("Duck Breast in Pistachio Crust");
 
 $pistachio_duck->addIngredient("Duck Breast", 1);
 $pistachio_duck->addIngredient("Pistachios, finely chopped", 1.5, "soup spoon");
-$pistachio_duck->addIngredient("Wild Rice, cooked", 1/3, "cup");
-$pistachio_duck->addIngredient("White Rice, cooked", 1/3, "cup");
-$pistachio_duck->addIngredient("Egg plant", 1/4);
+$pistachio_duck->addIngredient("Wild Rice, cooked", 1 / 3, "cup");
+$pistachio_duck->addIngredient("White Rice, cooked", 1 / 3, "cup");
+$pistachio_duck->addIngredient("Egg plant", 1 / 4);
 $pistachio_duck->addIngredient("Asparagus spear", 1);
 $pistachio_duck->addIngredient("Duck stock", 8, "ounce");
 $pistachio_duck->addIngredient("Port wine", .5, "ounce");
